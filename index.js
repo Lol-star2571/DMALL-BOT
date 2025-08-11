@@ -13,10 +13,10 @@ const client = new Client({
 });
 
 // Remplacez par une liste d'IDs des utilisateurs autorisés
-const AUTHORIZED_USERS = ['1322961890749710409', '1332676536796577792', 'ID_UTILISATEUR_3'];
+const AUTHORIZED_USERS = ['owner_1', 'owner_2', 'owner_3'];
 
 // Token du bot
-const BOT_TOKEN = "MTM1NjYwOTA3ODQ3ODI0NjAwOQ.GyVKxC.WmHTQ0nEdAbRWbYRmf6t2uKXcUYa3uPUXNHnhU";
+const BOT_TOKEN = "TOKEN";
 
 client.once('ready', () => {
     console.log(`Connecté en tant que ${client.user.tag}`);
@@ -57,7 +57,7 @@ client.on('messageCreate', async (message) => {
             }
         }
 
-        // Commande `!dmall` - Envoie un DM à tous les membres
+        // Commande `!!dmall` - Envoie un DM à tous les membres
         if (command === 'dmall') {
             const dmMessage = args.join(' ');
             if (!dmMessage) {
